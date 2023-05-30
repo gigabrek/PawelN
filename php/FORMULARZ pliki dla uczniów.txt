@@ -1,0 +1,125 @@
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+https://www.php.net/manual/en/filter.examples.validation.php
+
+//CZ 1.
+//style.css -------------------------------------------------------------
+*
+{
+    border: 0;
+    margin: 0;
+}
+body
+{
+    text-align: center;
+}
+#container
+{
+    text-align: left;
+    margin: 10px auto;    
+    width: 800px;
+}
+#top
+{
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+#menu
+{
+    float: left;
+    width: 75px;    
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+}
+#content
+{
+    float: left;
+    width: 724px;
+}
+#text
+{
+    padding: 10px;
+    line-height: 140%;
+    border: 1px solid black;   
+    border-top: none;
+}
+p
+{
+    margin-top: 10px;
+}
+
+
+//index.php -----------------------------------------------
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- <script type="text/javascript" src="jsc.js"></script> -->
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            BANER
+        </div>
+        <div id="menu">
+            <div><a href="#">Java</a></div><br>
+            <div><a href="#">PHP</a></div><br>
+            <div><a href="#">MySql</a></div><br>
+        </div>
+        <div id="content">
+            <div id="text">
+                <?php
+
+                '<br>';
+                echo "<p>Zacznijmy od tego, którą gałąź informatyki mam zamiar omawiać, ponieważ pojęcie 'informatyka' jest bardzo wieloznaczne. W sumie to informatykiem w dzisiejszym skomputeryzowanym świecie może nazwać się prawie każdy - wystarczy, że potrafi się przetwarzać informacje znajdujące się w naszych komputerach, czyli np. przeszukiwać zawartość internetu przy pomocy wyszukiwarki.</p>
+
+                <p>Ja mam zamiar przekazać Ci tajniki w jaki sposób efektywnie uczyć się programować. Co to tak naprawdę oznacza słowo PROGRAMOWANIE? Programowanie oznacza pisanie kodu w jakimś języku, czyli czymś za pomocą czego możemy komunikować się z naszą można by rzec bez nas głupią (przynajmniej na razie) maszyną PC (Personal Computer). Czyli programowanie można by porównać do pisania tejże tutaj lekcji, przy pomocy której komunikuję się z Tobą w języku polskim. </p>
+                <p>(...)</p>
+                <p>Jak się uczyć informatyki</p>";
+                ?>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+--------CZ II. form.php ------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+</head>
+
+<body>
+    <section class="container pt-5">
+        <form method="post" action="complete.php">
+            <div class="mb-3">
+                <label for="email" class="form-label">Adres e-mail</label>
+                <input type="email" class="form-control" id="email" name="email">
+                <div id="emailHelp" class="form-text">Nie udostępniamy nikomu Twojego adresu.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Hasło</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                <label class="form-check-label" for="remember">Zapamiętaj mnie</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Zaloguj się</button>
+        </form>
+    </section>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.js"></script>
+</body>
+
+</html>
+
+
+
